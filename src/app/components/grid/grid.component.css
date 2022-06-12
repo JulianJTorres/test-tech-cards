@@ -1,0 +1,76 @@
+.content {
+  padding: 1em;
+  height: calc(100% - 64px);
+  width: 100%;
+}
+
+.header-text {
+  border-radius: 10px;
+  justify-content: center;
+  font-size: xxx-large;
+}
+
+.search {
+  background-color: #212121;
+  border-radius: 10px;
+}
+
+.search__icon {
+  color: white;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.search__icon--hover:hover {
+  color: rgb(187, 0, 255);
+}
+
+.search__input {
+  width: 50%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.grid {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  padding: 1em;
+  margin-top: 30px;
+}
+
+.loading {
+  height: 100%;
+}
+
+.loading__progress-bar {
+  border-radius: 5px;
+  height: 10px;
+  margin-top: 20px;
+}
+
+.loading__text {
+  margin-top: 10px;
+}
+
+.no-data {
+  height: 100%;
+}
+
+.no-data__text {
+  margin-top: 10px;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: white;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: white;
+}
+
+::ng-deep .mat-input-element {
+  caret-color: white;
+  color: white !important;
+}

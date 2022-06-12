@@ -1,0 +1,72 @@
+<div class="content" fxLayout="column">
+  <!-- Título -->
+  <p>
+    <mat-toolbar class="header-text">
+      <span>Prueba Tech</span>
+    </mat-toolbar>
+  </p>
+
+  <!-- Barra de búsqueda -->
+  <div class="search" fxLayout="row" fxLayoutAlign="start center">
+    <label for="search__icon" class="mr-8">
+      <mat-icon matTooltip="Realizar búsqueda" class="search__icon search__icon--hover"
+        >search</mat-icon
+      >
+    </label>
+    <mat-form-field
+      ngDefaultControl
+      [(ngModel)]="inputSearch"
+      fxFlex="1 0 auto"
+      class="search__input"
+    >
+      <input
+        id="search-input"
+        matInput
+        #filter
+        placeholder="Búsqueda"
+        (keyup)="applyFilter($event)"
+      />
+    </mat-form-field>
+    <mat-divider></mat-divider>
+  </div>
+
+  <!-- Grid de tarjetas (images) -->
+  <div
+    id="GraphicsCardListContainer"
+    *ngIf="cardArray.length !== 0"
+    class="grid"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [scrollWindow]="false"
+  >
+    <div id="cardArrayGrid"  fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div
+        fxFlex="25%"
+        fxFlex.xs="100%"
+        fxFlex.sm="33%"
+        *ngFor="let element of cardArray; trackBy: trackById"
+      >
+        <app-image
+          id="element.id"
+          *ngIf="element.image"
+          [image]="element.image"
+        ></app-image>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="cardArray.length === 0 && !cardService.noDataReturned()">
+    <div class="loading">
+      <mat-progress-bar
+        mode="indeterminate"
+        class="loading__progress-bar"
+      ></mat-progress-bar>
+      <h1 class="loading__text">Cargando imágenes. Espere...</h1>
+    </div>
+  </div>
+  <div *ngIf="cardService.noDataReturned()">
+    <div id="noData" class="no-data">
+      <h1 class="no-data__text">No existen datos.</h1>
+    </div>
+  </div>
+</div>

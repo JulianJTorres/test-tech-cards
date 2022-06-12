@@ -1,0 +1,11 @@
+<mat-card class="mat-elevation-z4">
+  <img
+    mat-card-image,
+    [id]="grafcard.id"
+    [alt]="cardError(grafcard.id)"
+    [lazyLoad]="grafcard.image"
+  />
+  <div mat-card-content [matTooltip]="grafcard.name">
+    {{ grafcard.name }}
+  </div>
+</mat-card>
