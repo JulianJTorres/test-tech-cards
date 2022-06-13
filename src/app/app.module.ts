@@ -28,9 +28,16 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CardService } from './services/card.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { DialogcardComponent } from './dialogcard/dialogcard.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, GridComponent],
+  declarations: [
+    AppComponent,
+    CardComponent,
+    GridComponent,
+    DialogcardComponent
+  ],
   imports: [
     // Angular
     BrowserModule,
@@ -50,6 +57,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
     MatGridListModule,
     MatProgressBarModule,
     MatDividerModule,
+    MatDialogModule,
     //HTML Layout
     FlexLayoutModule,
     //Infinite scroll
@@ -59,7 +67,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image';
   ],
   exports: [GridComponent],
   providers: [
-    // Image service
+    // Card service
     CardService,
     // Provider encargado de llamar al servicio de tarjetas cuando se carga el módulo.
     {

@@ -1,4 +1,4 @@
-<mat-card class="mat-elevation-z4">
+<mat-card class="mat-elevation-z4 card" (click)="myMouseClicked($event)" >
   <img
     mat-card-image
     [id]="grafcard.id"
@@ -6,8 +6,7 @@
     [lazyLoad]="grafcard.image"
   />
   <div mat-card-content [matTooltip]="grafcard.name">
-    <div>{{ grafcard.name }}</div>
-    <div>{{ grafcard.name }}</div>
-    <div>{{ grafcard.name }}</div>
+    <div>{{ grafcard.model }}  -  PVP: {{ grafcard.price }} €</div>
+    <div>{{ grafcard.manufacturer }} - {{grafcard.assembler}}</div>
   </div>
 </mat-card>

@@ -43,6 +43,6 @@ export class GridComponent implements OnInit {
 
   // Funcion trackBy para optimizar la carga del ngFor
   public trackById(index: number, item: Card_): number {
-    return item.id;
+    return parseInt(item.id);
   }
 }

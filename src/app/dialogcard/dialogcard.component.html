@@ -1,0 +1,11 @@
+<mat-card class="mat-elevation-z4" >
+  <img
+    mat-card-image
+    [id]="dcard.id"
+    [lazyLoad]="dcard.image"
+  />
+  <div mat-card-content [matTooltip]="data.name">
+    <div>{{ dcard.model }}  -  PVP: {{ dcard.price }} €</div>
+    <div>{{ dcard.manufacturer }} - {{dcard.assembler}}</div>
+  </div>
+</mat-card>

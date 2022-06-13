@@ -88,4 +88,13 @@ export class CardService {
   noDataReturned(): boolean {
     return this.noData;
   }
+
+  public getJSONbyId(id: string): Observable<Card_[]> {
+    const url_params = this.cardsUrl + '/?id={id}'.replace('{id}', id);
+    const obsCardArray = this.http.get<Card_[]>(url_params).pipe(
+      tap((data) => this.buildCardArray(JSON.stringify(data))),
+      catchError(this.handleError)
+    );
+    return obsCardArray;
+  }
 }
