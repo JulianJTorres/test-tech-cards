@@ -11,7 +11,7 @@ export class CardComponent implements OnInit {
   // showCard: boolean; Abría que añadirlo como ngIf en la <mat-card>
   constructor() {}
   ngOnInit(): void {
-    console.log('CardComponent ngOnInit called');
+    console.log('CardComponent ngOnInit called', this.grafcard);
   }
   cardError(id: number): string {
     return ' La tarjeta ' + id + ' no ha sido encontrada.';

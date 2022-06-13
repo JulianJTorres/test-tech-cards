@@ -30,7 +30,7 @@
     <mat-divider></mat-divider>
   </div>
 
-  <!-- Grid de tarjetas (images) -->
+  <!-- Grid de tarjetas -->
   <div
     id="GraphicsCardListContainer"
     *ngIf="cardArray.length !== 0"
@@ -47,9 +47,7 @@
         *ngFor="let element of cardArray; trackBy: trackById"
       >
         <app-image
-          id="element.id"
-          *ngIf="element.image"
-          [image]="element.image"
+          [grafcard]="element"
         ></app-image>
       </div>
     </div>
