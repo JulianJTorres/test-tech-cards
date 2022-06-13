@@ -5,6 +5,7 @@ export class Card_ {
     public name: string,
     public manufacturer: string,
     public model: string,
-    public assembler: string
+    public assembler: string,
+    public price: string
   ) {}
 }

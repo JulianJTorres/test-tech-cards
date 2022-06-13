@@ -42,7 +42,8 @@ export class CardService {
         json_card.name,
         json_card.manufacturer,
         json_card.model,
-        json_card.assembler
+        json_card.assembler,
+        json_card.price
       );
       cards.push(card);
     }

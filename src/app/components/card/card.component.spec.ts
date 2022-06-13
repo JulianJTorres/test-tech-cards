@@ -28,7 +28,8 @@ describe('CardComponent', () => {
       name: 'Prueba',
       manufacturer: 'Prueba',
       model: 'Prueba',
-      assembler: 'Prueba'
+      assembler: 'Prueba',
+      price: 'Prueba'
     };
     fixture.detectChanges();
   });
