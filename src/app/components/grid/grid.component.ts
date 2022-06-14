@@ -20,6 +20,9 @@ export class GridComponent implements OnInit {
 
   ngOnInit() {
     const parameters = this.checkUrlParameters();
+    // Vamos a considerar que el parametro que viene de la url es para generar un filtrado previo de los datos
+    // y no tiene nada que ver con el componente de busqueda. Este seguira trabajando con el mismo array de datos global
+    // siempre se puede solicitar un nuevo endpoint que nos devuelva los datos ya filtrados del BE añadiendo el parametro search
     if (parameters.length == 0) {
       this.refreshDataSource('');
     } else if (parameters.length == 1 && parameters[0].key == 'search') {
