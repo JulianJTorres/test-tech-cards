@@ -5,8 +5,7 @@
     [alt]="cardError(grafcard.id)"
     [lazyLoad]="grafcard.image"
   />
-  <div mat-card-content [matTooltip]="grafcard.name">
-    <div>{{ grafcard.model }}  -  PVP: {{ grafcard.price }} €</div>
-    <div>{{ grafcard.manufacturer }} - {{grafcard.assembler}}</div>
+  <div class="cardDescription" mat-card-content [matTooltip]="grafcard.name">
+    <div>{{grafcard.manufacturer}} - {{ grafcard.model }}</div>
   </div>
 </mat-card>

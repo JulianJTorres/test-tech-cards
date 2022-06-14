@@ -28,9 +28,7 @@ export class CardComponent implements OnInit {
   openDialog(): void {
     console.log('Open Modal');
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.height = '700px';
-    dialogConfig.width = '600px';
     dialogConfig.data = this.grafcard;
-    this.matDialog.open(DialogcardComponent, dialogConfig); //Abre el componente Modal/Dialog con la configuracion
+    this.matDialog.open(DialogcardComponent, dialogConfig); //Abre el componente Modal/Dialog con la configuracion indicada, incluido el objeto Card_
   }
 }

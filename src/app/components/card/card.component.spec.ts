@@ -23,13 +23,14 @@ describe('CardComponent', () => {
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
     component.grafcard = {
-      id: 1,
-      image: 'https://i.picsum.photos/id/9/500/500.jpg',
-      name: 'Prueba',
-      manufacturer: 'Prueba',
-      model: 'Prueba',
-      assembler: 'Prueba',
-      price: 'Prueba'
+      id: '1',
+      image:
+        'https://thumb.pccomponentes.com/w-300-300/articles/35/357848/1157-msi-geforce-rtx-3060-ventus-2x-oc-12gb-gddr6.jpg',
+      name: 'MSI GeForce RTX 3060 VENTUS 2X OC LHR 12GB GDDR6',
+      manufacturer: 'MSI',
+      model: 'GeForce RTX 3060',
+      assembler: 'Assembled by Nvidia',
+      price: '460,99'
     };
     fixture.detectChanges();
   });
@@ -40,8 +41,11 @@ describe('CardComponent', () => {
 
   it('Renderiza el @Input Card_', async () => {
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.innerHTML).toContain('https://i.picsum.photos/id/9/5');
+    expect(compiled.innerHTML).toContain(
+      'https://thumb.pccomponentes.com/w-300-300/articles/35/357848/1157-msi-geforce-rtx-3060-ventus-2x-oc-12gb-gddr6.jpg'
+    );
     expect(compiled.querySelector('img').id).toContain('1');
-    expect(compiled.textContent.trim()).toBe('Prueba');
+    expect(compiled.textContent.trim()).toContain('MSI');
+    expect(compiled.textContent.trim()).toContain('GeForce RTX 3060');
   });
 });

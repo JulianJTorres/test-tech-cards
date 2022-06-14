@@ -47,7 +47,7 @@ describe('GridComponent', () => {
     fixture.detectChanges();
     expect(compiled.querySelector('mat-progress-bar')).toBeTruthy;
     expect(compiled.querySelector('h1')?.innerHTML).toEqual(
-      'Cargando imágenes. Espere...'
+      'Cargando. Espere...'
     );
   });
 
@@ -61,11 +61,11 @@ describe('GridComponent', () => {
     });
   });
 
-  it('Se cargan 4000 imágenes', (done) => {
+  it('Se cargan las tarjetas', (done) => {
     fixture.detectChanges();
     fixture.whenStable().then(() => {
       fixture.detectChanges();
-      expect(compiled.querySelectorAll('app-image').length).toEqual(4000);
+      expect(compiled.querySelectorAll('app-image').length).toBeGreaterThan(0);
       done();
     });
   });

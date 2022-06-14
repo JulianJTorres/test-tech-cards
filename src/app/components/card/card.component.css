@@ -3,5 +3,8 @@
 }
 
 .card:hover{
-  box-shadow: 0 14px 28px rgba(24, 219, 245, 0.75), 10px 10px 10px rgba(0,0,0,0.22);
+  -webkit-box-shadow: 10px 10px 35px 3px rgba(74,159,224,1);
+  -moz-box-shadow: 10px 10px 35px 3px rgba(74,159,224,1);
+  box-shadow: 10px 10px 35px 3px rgba(74,159,224,1);
+  /*box-shadow: 0 14px 28px rgba(24, 219, 245, 0.75), 10px 10px 10px rgba(0,0,0,0.22);*/
 }

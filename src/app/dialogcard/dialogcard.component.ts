@@ -18,6 +18,8 @@ export class DialogcardComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('DialogcardComponent ngOnInit called', this.data);
+    // Aunque ya tenemos la informacion en el constructor, realizamos una llamada al servicio filtrando por el id,
+    // como si tuvieramos la informacion dentro del json en en una url filtrada que ya te devolviera toda la informacion actualizada del producto
     this.cardService
       .getJSONbyId(this.data.id)
       .pipe(take(1))
