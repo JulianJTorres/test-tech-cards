@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { DialogcardComponent } from './dialogcard/dialogcard.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     //Infinite scroll
     InfiniteScrollModule,
     // Lazy loading for images
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    RouterModule
   ],
   exports: [GridComponent],
   providers: [

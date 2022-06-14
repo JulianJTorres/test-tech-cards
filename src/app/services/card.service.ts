@@ -72,8 +72,8 @@ export class CardService {
         } else {
           const resFiltered = res.filter(
             (x: Card_) =>
-              x.name.toLocaleLowerCase().includes(filter) ||
-              x.id.toString().includes(filter)
+              x.name.toLocaleLowerCase().includes(filter.toLowerCase()) ||
+              x.id.includes(filter)
           );
           resFiltered.length === 0
             ? (this.noData = true)
